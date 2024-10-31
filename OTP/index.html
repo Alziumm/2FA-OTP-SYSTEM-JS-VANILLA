@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Clean OTP System in vanilla JS.</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body class = "c">
+        <div class="otp-container">
+            <form method="POST" target="_self" class="mt10">
+                <h2 class = "login-title tc"><span class = "primary">Vérifier</span> votre compte.</h2>
+                <ul class="c">
+                    <li class = "mt30 instruction">Pour finaliser la procédure, veuillez entrer un jeton d'authentification généré par votre application.</li>
+                </ul>
+                <div class="field">
+                    <div class="otp-content mt30">
+                        <div class="otp-field" id="otp-field" otpname = "Email">
+                            <input autocomplete="one-time-code" type="text" id = "c1Setup" name="c1-setup" required="">
+                            <input autocomplete="one-time-code" type="text" id = "c2Setup" name="c2-setup" required="">
+                            <input autocomplete="one-time-code" type="text" id = "c3Setup" name="c3-setup" required="" class="space">
+                            <input autocomplete="one-time-code" type="text" id = "c4Setup" name="c4-setup" required="">
+                            <input autocomplete="one-time-code" type="text" id = "c5Setup" name="c5-setup" required="">
+                            <input autocomplete="one-time-code" type="text" id = "c6Setup" name="c6-setup" required="">
+                        </div>
+                    </div>
+                </div>
+                <!-- "You can place as many OTPs input per page as you wish."  -->
+                <!--
+                <div class="field">
+                    <div class="otp-content mt30">
+                        <div class="otp-field" id="otp-field" otpname = "Phone">
+                            <input autocomplete="one-time-code" type="text" id = "c1Setup" name="c1-setup" required="">
+                            <input autocomplete="one-time-code" type="text" id = "c2Setup" name="c2-setup" required="">
+                            <input autocomplete="one-time-code" type="text" id = "c3Setup" name="c3-setup" required="" class="space">
+                            <input autocomplete="one-time-code" type="text" id = "c4Setup" name="c4-setup" required="">
+                            <input autocomplete="one-time-code" type="text" id = "c5Setup" name="c5-setup" required="">
+                            <input autocomplete="one-time-code" type="text" id = "c6Setup" name="c6-setup" required="">
+                        </div>
+                    </div>
+                </div> 
+                -->
+                <div class ="c">
+                    <p class = "answer instruction status-color" id = "status-2FA"></p>
+                </div>
+                <div class="c">
+                    <button id = "otp-verif" class = "btn btn-11 mt20 mx275">Vérifier</button>
+                </div>
+            </form>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>

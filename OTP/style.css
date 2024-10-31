@@ -1,0 +1,187 @@
+/* 
+
+    Root rules, can be deleted or replaced to fit your needs. 
+
+*/
+
+:root {
+    --OTPprimary: #0013c5;
+    --OTPblack:#000000;
+    --OTPwhite: #F3F4F8;
+    --OTPerror: #dc3545;
+    --OTPfade: linear-gradient(-115deg, #00095f 7.31%, #0013c5 95.71%);
+}
+
+/*
+
+    Global rules, should already exist in your projet so you can delete:
+
+*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: sans-serif;
+    color: var(--OTPblack);
+    background: var(--OTPwhite);
+    z-index: 10;
+    min-width: 320px;
+    height: 100vh;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.c {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/*
+
+    Custom rules, should be added to your project:
+
+    (I deliberately placed all the rules in the "otp-container" to avoid style override issues.
+
+*/
+
+/* You can add: `.otp-container .verified {}` if you want to add style when the OTP is good. */
+
+.otp-container .shake {
+    animation: shake 0.5s ease-in-out !important;
+}
+
+.otp-container .mt10 {
+    margin-top: 10px;
+}
+
+.otp-container .mt20 {
+    margin-top: 20px;
+}
+
+.otp-container .mt30 {
+    margin-top: 30px;
+}
+
+.otp-container .tc {
+    text-align: center;
+}
+
+.otp-container .login-title {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.otp-container .primary {
+    color: var(--OTPprimary);
+}
+
+.otp-container .instruction {
+    font-size: 400;
+    color: var(--OTPblack);
+    font-size: 13px;
+    margin-top: 15px;
+}
+
+.otp-container {
+    width: 425px;                               /* You can replace it by a % */
+    padding: 1.5rem;
+    border-radius: 20px;
+    background: var(--OTPwhite);
+    box-shadow: 0px 4px 23.3px 5px rgba(0, 0, 0, 0.25);
+    /* transition: all 1s ease-in-out; */       /* Uncomment this if you want a transition effect. */
+    opacity: 1;
+}
+
+.otp-container .status-color {
+    color: var(--OTPerror);
+}
+
+.otp-container .answer {
+    margin-top: 15px;
+}
+
+.otp-container .otp-content {
+    margin-bottom:5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.otp-container .otp-field {
+    display: flex;
+}
+
+.otp-container .otp-field input {
+    width: 24px;
+    font-size: 32px;
+    text-align: center;
+    border-radius: 5px;
+    margin: 2px;
+    border: 2px solid var(--OTPblack);
+    background: var(--OTPblack);
+    font-weight: bold;
+    color: var(--OTPwhite);
+    outline: none;
+    transition: all 0.1s;width: 40px;
+}
+
+.otp-container .otp-field input:focus {
+    border: 2px solid var(--OTPprimary);
+    box-shadow: 0 0 2px 2px var(--OTPprimary);
+}
+
+.otp-container .disabled {
+    opacity: 0.5;
+}
+
+.otp-container .space {
+    margin-right: 1rem !important;
+}
+
+.otp-container .btn {
+    width: 100%;
+    height: 50px;
+    color: var(--OTPwhite);
+    border-radius: 10px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    background: var(--OTPfade);
+    border: none;
+    letter-spacing: 0.5px;
+    line-height: 50px;
+    overflow: hidden;
+    padding: 0 16px;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.otp-container .btn:hover {
+    background: var(--OTPprimary);
+}
+
+.otp-container .mx275 {
+    max-width: 275px !important;
+}
+
+@keyframes shake {0% {-webkit-transform: translate(2px, 1px) rotate(0deg);} 10% {-webkit-transform: translate(-1px, -2px) rotate(-1deg);} 20% {-webkit-transform: translate(-3px, 0px) rotate(1deg);} 30% {-webkit-transform: translate(0px, 2px) rotate(0deg);} 40% {-webkit-transform: translate(1px, -1px) rotate(1deg);} 50% {-webkit-transform: translate(-1px, 2px) rotate(-1deg);} 60% {-webkit-transform: translate(-3px, 1px) rotate(0deg);} 70% {-webkit-transform: translate(2px, 1px) rotate(-1deg);} 80% {-webkit-transform: translate(-1px, -1px) rotate(1deg);} 90% {-webkit-transform: translate(2px, 2px) rotate(0deg);} 100% {-webkit-transform: translate(1px, -2px) rotate(-1deg);}}
